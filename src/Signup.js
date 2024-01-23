@@ -31,7 +31,7 @@ export default function Signup(){
 
         e.preventDefault();
 
-        fetch("http://localhost:4000/accounts/register",{
+        fetch("https://real-pear-fly-kilt.cyclic.app/accounts/register",{
             body:JSON.stringify(data),
             method:"POST",
             headers:{
@@ -55,7 +55,7 @@ export default function Signup(){
     return(
         <div className="signup-form body">
     <form  onSubmit={mySubmit}>
-		<h2>Sign Up</h2>
+		<h2 className='text-center'>Sign Up</h2>
 		{/* <p>It's free and only takes a minute.</p> */}
 		<hr />
         <div className="form-group">
@@ -77,11 +77,11 @@ export default function Signup(){
             <input type="password" className="form-control" name="confirmPassword" placeholder="Confirm Password" required="required" onChange={myChangeHandler}/>
         </div>
 		<div className="form-group">
-            <input type="submit" className="btn btn-primary btn-block btn-lg" / >
+            <input type="submit" className="btn btn-primary btn-block btn-lg" />
         </div>
 		
     </form>
-	<div className="text-center">Already have an account? <Link to="/" style={{color: "red"}}>Login here</Link></div>
+	<div className="text-center">Already have an account? <Link to="/" style={{color: "red"}}><b>Login here</b></Link></div>
 </div>
     )
 }

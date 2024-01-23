@@ -8,7 +8,7 @@ export default function Product() {
 
         <Header></Header>
 
-        <ProductList></ProductList>
+        <ProductList> </ProductList>
 
 
 

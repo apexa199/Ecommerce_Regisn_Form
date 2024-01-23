@@ -27,7 +27,7 @@ const[data,setData]= useState({
 
         e.preventDefault();
 
-        axios.post("http://localhost:4000/accounts/authenticate",
+        axios.post("https://real-pear-fly-kilt.cyclic.app/accounts/authenticate",
         data)
         .then(y=>{
             console.log(y);
@@ -43,33 +43,21 @@ const[data,setData]= useState({
 
     return( <div className="signup-form" style={myStyle}>
     <form  onSubmit={mySubmit}>
-		<h2>Login</h2>
+		<h2 className='text-center'>Login</h2>
 		{/* <p>It's free and only takes a minute.</p> */}
-		<hr />
-        {/* <div className="form-group">
-        	<input type="text" className="form-control" name="title" placeholder="Title" required="required" onChange={myChangeHandler} />
-        </div> */}
-        {/* <div className="form-group">
-        	<input type="text" className="form-control" name="firstName" placeholder="Enter Firstname" required="required" onChange={myChangeHandler} />
-        </div> */}
-        {/* <div className="form-group">
-        	<input type="text" className="form-control" name="lastName" placeholder="Enter Lastname" required="required" onChange={myChangeHandler}  />
-        </div> */}
+	
         <div className="form-group">
         	<input type="email" className="form-control" name="email" placeholder="Email Address" required="required" onChange={changeInput} />
         </div>
 		<div className="form-group">
             <input type="password" className="form-control" name="password" placeholder="Password" required="required" onChange={changeInput}/>
         </div>
-		{/* <div className="form-group">
-            <input type="password" className="form-control" name="confirmPassword" placeholder="Confirm Password" required="required" onChange={myChangeHandler}/>
-        </div> */}
 		<div className="form-group">
-            <input type="submit" className="btn btn-primary btn-block btn-lg" / >
+            <input type="submit" className="btn btn-primary btn-block btn-lg" />
         </div>
 		
     </form>
-	<div className="text-center">Don't have an account? <Link to="/signup" style={{color: "red"}}>Signup here</Link></div>
+	<div className="text-center">Don't have an account? <Link to="/signup" style={{color: "red"}}><b>Signup here</b></Link></div>
 </div>
     )
 }
