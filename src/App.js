@@ -20,8 +20,7 @@ function App() {
                     color: '#fff',
                     background: 'blue',
                   }
-                : { color: 'white', background: 'red' }
-            }
+                : { color: 'white', background: 'red' }}
           >MyPage
             </NavLink>
 
