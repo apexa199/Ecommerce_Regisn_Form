@@ -12,6 +12,8 @@ import { NoFound } from './NoFound';
 import { User } from './User';
 import { Profile } from './Profile';
 import { Account } from './Account';
+import { MyRoutes } from './MyRoutes';
+import { Suspense } from 'react';
 
 function App() {
   return (
@@ -23,8 +25,12 @@ function App() {
         <Link to="/user">User</Link>
       </nav>
 
-<CustomHookLink to='/'>Login</CustomHookLink>
+      <Suspense fallback={<div>Loading</div>}></Suspense>
 
+<MyRoutes/>
+
+<CustomHookLink to='/'>Login</CustomHookLink>
+{/* 
   <NavLink to="/"
             style={({ isActive }) =>
               isActive ? {
@@ -54,7 +60,7 @@ function App() {
 
     <Route path='*' element={<NoFound/>}/>
 
-    </Routes>
+    </Routes> */}
 
     </BrowserRouter>
   );

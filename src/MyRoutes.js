@@ -5,12 +5,16 @@ import Product from './Product';
 import { User } from './User';
 import { Profile } from './Profile';
 import { Account } from './Account';
+import { useRoutes } from 'react-router-dom';
+import RequireAuth from './private/RequireAuth';
 
+
+const LoginNew = React.lazy(() => import("./Login"));
 
 export const MyRoutes = () => {
     let element = useRoutes([
 
-        { path: "/", element: <Login /> },
+        { path: "/", element: <LoginNew /> },
         { path: "/signup", element: <Signup /> },
         { path: "/productlist", element: <RequireAuth><Product/>
 
